@@ -10,7 +10,8 @@ const stylesHandler = "style-loader";
 const config = {
   entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, "dist"),
+    // path: path.resolve(__dirname, "dist"),
+    publicPath: "https://mariagluck.github.io/memory-game/",
   },
   devServer: {
     open: true,
@@ -21,8 +22,6 @@ const config = {
       template: "index.html",
     }),
 
-    // Add your plugins here
-    // Learn more about plugins from https://webpack.js.org/configuration/plugins/
   ],
   module: {
     rules: [
@@ -49,8 +48,6 @@ const config = {
       //   type: "asset",
       // },
 
-      // Add your rules for custom modules here
-      // Learn more about loaders from https://webpack.js.org/loaders/
     ],
   },
 };
